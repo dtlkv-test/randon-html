@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Bonus</title>
+  <style>
+    body {
+      font-family: Helvetica, Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+    }
+
+    .result {
+      font-size: 24px;
+      font-weight: bold;
+      padding: 20px;
+      border: 2px solid #ffcc00;
+      border-radius: 10px;
+      width: 80%;
+      max-width: 300px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="content" class="result"></div>
+
+<script>
+  // Define different HTML content options
+  const options = [
+    '<h1>10% Discount!</h1><p>Congratulations! You won a 10% discount!</p>',
+    '<h1>15% Discount!</h1><p>Congratulations! You won a 15% discount!</p>',
+    '<h1>20% Discount!</h1><p>Congratulations! You won a 20% discount!</p>'
+  ];
+
+  // Select a random option
+  const selectedContent = options[Math.floor(Math.random() * options.length)];
+
+  // Insert selected content into the div with id="content"
+  document.getElementById('content').innerHTML = selectedContent;
+</script>
+
+</body>
+</html>
